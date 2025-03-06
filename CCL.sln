@@ -7,6 +7,8 @@ Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "ccl.client", "ccl.client\cc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CCL.Server", "CCL.Server\CCL.Server.csproj", "{5BAD017E-BC48-48AE-8736-32D234230CBC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLL.Application", "CLL.Application\CLL.Application.csproj", "{A7077AB8-1413-425C-9EFD-DA7D97C9D83D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{5BAD017E-BC48-48AE-8736-32D234230CBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BAD017E-BC48-48AE-8736-32D234230CBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BAD017E-BC48-48AE-8736-32D234230CBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7077AB8-1413-425C-9EFD-DA7D97C9D83D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7077AB8-1413-425C-9EFD-DA7D97C9D83D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7077AB8-1413-425C-9EFD-DA7D97C9D83D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7077AB8-1413-425C-9EFD-DA7D97C9D83D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
