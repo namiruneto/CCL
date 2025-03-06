@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "ccl.client", "ccl.client\ccl.client.esproj", "{4CDF448D-96B2-B521-61A4-49B1D67D98B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CCL.Server", "CCL.Server\CCL.Server.csproj", "{5BAD017E-BC48-48AE-8736-32D234230CBC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4CDF448D-96B2-B521-61A4-49B1D67D98B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CDF448D-96B2-B521-61A4-49B1D67D98B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CDF448D-96B2-B521-61A4-49B1D67D98B4}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4CDF448D-96B2-B521-61A4-49B1D67D98B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CDF448D-96B2-B521-61A4-49B1D67D98B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CDF448D-96B2-B521-61A4-49B1D67D98B4}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{5BAD017E-BC48-48AE-8736-32D234230CBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BAD017E-BC48-48AE-8736-32D234230CBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BAD017E-BC48-48AE-8736-32D234230CBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BAD017E-BC48-48AE-8736-32D234230CBC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4BAC6B05-5091-474C-9DEF-CF6DF965EB1B}
+	EndGlobalSection
+EndGlobal
