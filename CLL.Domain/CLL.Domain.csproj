@@ -18,4 +18,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CLL.Entities\CLL.Entities.csproj" />
+    <ProjectReference Include="..\CLL.Infrastructure\CLL.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

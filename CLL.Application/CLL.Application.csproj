@@ -18,4 +18,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CLL.Domain\CLL.Domain.csproj" />
+    <ProjectReference Include="..\CLL.Entities\CLL.Entities.csproj" />
+  </ItemGroup>
+
 </Project>
