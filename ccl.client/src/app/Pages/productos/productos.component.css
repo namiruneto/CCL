@@ -1,0 +1,71 @@
+.productos-container {
+  width: 85%;
+  max-width: 900px;
+  background: #ffffff;
+  padding: 20px;
+  margin: 40px auto;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  border: 5px solid #ddd; 
+}
+
+.titulo {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.productos-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+  .productos-tabla th {
+    background: #007BFF; 
+    color: white;
+    padding: 12px;
+  }
+
+  .productos-tabla td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+
+  .productos-tabla tbody tr:nth-child(even) {
+    background: #f9f9f9;
+  }
+
+  .productos-tabla tbody tr:hover {
+    background: #d6e4ff;
+  }
+
+.btn-editar, .btn-agregar {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-editar {
+  background: #007BFF;
+  color: white;
+}
+
+.btn-agregar {
+  background: #28A745;
+  color: white;
+  display: block;
+  margin: 20px auto;
+}
+
+  .btn-editar:hover, .btn-agregar:hover {
+    transform: scale(1.05);
+  }
+
+  .btn-editar:active, .btn-agregar:active {
+    transform: scale(0.98);
+  }

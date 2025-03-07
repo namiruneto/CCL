@@ -1,0 +1,26 @@
+<div class="productos-container">
+  <h2 class="titulo">📦 Lista de Productos</h2>
+
+  <table class="productos-tabla">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Cantidad</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let producto of productos">
+        <td>{{ producto.id }}</td>
+        <td>{{ producto.nombre }}</td>
+        <td>{{ producto.cantidad }}</td>
+        <td>
+          <button class="btn-editar" (click)="editarProducto(producto)">✏️ Editar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button class="btn-agregar" (click)="nuevoProducto()">➕ Agregar Producto</button>
+</div>
