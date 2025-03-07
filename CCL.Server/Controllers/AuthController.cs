@@ -9,11 +9,11 @@ namespace CCL.Server.Controllers
     using Microsoft.AspNetCore.Mvc;
 
     /// <summary>
-    /// Defines the <see cref="LoginController" />.
+    /// Defines the <see cref="AuthController" />.
     /// </summary>
     [Route("api/[controller]")]
     [ApiController]
-    public class LoginController : Controller
+    public class AuthController : Controller
     {
         /// <summary>
         /// Defines the _authService.
@@ -21,10 +21,10 @@ namespace CCL.Server.Controllers
         private readonly ILoginApplication _authService;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="LoginController"/> class.
+        /// Initializes a new instance of the <see cref="AuthController"/> class.
         /// </summary>
         /// <param name="authService">Servicio de autenticación y registro de usuario.</param>
-        public LoginController(ILoginApplication authService)
+        public AuthController(ILoginApplication authService)
         {
             _authService = authService;
         }
