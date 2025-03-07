@@ -21,6 +21,11 @@
         /// </summary>
         public DbSet<LoginRepositoryDto> usuarios { get; set; }
 
+        /// <summary>
+        /// Gets or sets the productos.
+        /// </summary>
+        public DbSet<ProductRepositoryDto> productos { get; set; }
+
         /// <inheritdoc/>
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
