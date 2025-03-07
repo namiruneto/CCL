@@ -38,12 +38,20 @@ builder.Services.AddAuthentication(options =>
 });
 
 builder.Services.AddScoped<ILoginApplication, LoginApplication>();
+builder.Services.AddScoped<IProductApplication, ProductApplication>();
 
 builder.Services.AddScoped<ILoginDomain, LoginDomain>();
+builder.Services.AddScoped<IProductDomain, ProductDomain>();
+
 builder.Services.AddScoped<ILoginRepository, LoginRepository>();
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+
 
 builder.Services.AddScoped<Lazy<ILoginRepository>>(sp => new Lazy<ILoginRepository>(() =>   sp.GetRequiredService<ILoginRepository>()));
+builder.Services.AddScoped<Lazy<IProductRepository>>(sp => new Lazy<IProductRepository>(() =>   sp.GetRequiredService<IProductRepository>()));
+
 builder.Services.AddScoped<Lazy<ILoginDomain>>(sp => new Lazy<ILoginDomain>(() => sp.GetRequiredService<ILoginDomain>()));
+builder.Services.AddScoped<Lazy<IProductDomain>>(sp => new Lazy<IProductDomain>(() => sp.GetRequiredService<IProductDomain>()));
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql("Host=localhost;Port=5432;Database=CLL;Username=postgres;Password=12345678"));
