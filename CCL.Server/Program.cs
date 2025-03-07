@@ -12,10 +12,23 @@ using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+        policy =>
+        {
+            policy.AllowAnyOrigin()
+                  .AllowAnyMethod()
+                  .AllowAnyHeader()
+                    .WithExposedHeaders("Access-Control-Allow-Origin");
+        });
+});
+
 
 builder.Services.AddControllers();
 var secretKey = Environment.GetEnvironmentVariable("MySecretKey");
+var DbConnection = Environment.GetEnvironmentVariable("DbConnection");
 var key = Convert.FromBase64String(secretKey);
 
 builder.Services.AddAuthentication(options =>
@@ -31,9 +44,9 @@ builder.Services.AddAuthentication(options =>
         ValidateAudience = true,
         ValidateLifetime = true,
         ValidateIssuerSigningKey = true,
-        ValidIssuer = "BackEnd", // Aseg�rate de que coincida con lo que est�s usando al crear el token
-        ValidAudience = "FrontEnd", // Aseg�rate de que coincida con lo que est�s usando al crear el token
-        IssuerSigningKey = new SymmetricSecurityKey(key) // Usar la misma clave
+        ValidIssuer = "BackEnd",
+        ValidAudience = "FrontEnd", 
+        IssuerSigningKey = new SymmetricSecurityKey(key) 
     };
 });
 
@@ -54,15 +67,15 @@ builder.Services.AddScoped<Lazy<ILoginDomain>>(sp => new Lazy<ILoginDomain>(() =
 builder.Services.AddScoped<Lazy<IProductDomain>>(sp => new Lazy<IProductDomain>(() => sp.GetRequiredService<IProductDomain>()));
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseNpgsql("Host=localhost;Port=5432;Database=CLL;Username=postgres;Password=12345678"));
+    options.UseNpgsql(DbConnection));
 
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
 
-    // Configuraci�n de autenticaci�n
+    
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         In = ParameterLocation.Header,
@@ -89,9 +102,8 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 var app = builder.Build();
+app.UseCors(MyAllowSpecificOrigins);
 
-
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
