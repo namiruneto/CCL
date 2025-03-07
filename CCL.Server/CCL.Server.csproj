@@ -10,9 +10,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.SpaProxy">
       <Version>8.*-*</Version>
     </PackageReference>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -25,7 +27,9 @@
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="..\CLL.Application\CLL.Application.csproj" />
+    <ProjectReference Include="..\CLL.Domain\CLL.Domain.csproj" />
     <ProjectReference Include="..\CLL.Entities\CLL.Entities.csproj" />
+    <ProjectReference Include="..\CLL.Infrastructure\CLL.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
