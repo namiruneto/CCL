@@ -1,0 +1,17 @@
+<div class="producto-form-container">
+  <h2 class="form-title">{{ producto.id === 0 ? '➕ Nuevo Producto' : '✏️ Editar Producto' }}</h2>
+
+  <form class="producto-form">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" [(ngModel)]="producto.nombre" name="nombre" required />
+    <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+
+    <label for="cantidad">Cantidad:</label>
+    <input type="number" id="cantidad" [(ngModel)]="producto.cantidad" name="cantidad" required />
+
+    <div class="form-buttons">
+      <button type="button" class="btn-guardar" (click)="guardarProducto()">💾 Guardar</button>
+      <button type="button" class="btn-cancelar" (click)="cancelar()">❌ Cancelar</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,88 @@
+/* Contenedor principal */
+.producto-form-container {
+  width: 85%;
+  max-width: 500px;
+  background: #ffffff;
+  padding: 25px;
+  margin: 40px auto;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  border: 5px solid #ddd;
+}
+
+/* Título */
+.form-title {
+  color: #333;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+/* Formulario */
+.producto-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+  .producto-form label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+  .producto-form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: border 0.3s;
+  }
+
+    .producto-form input:focus {
+      border-color: #007BFF;
+      outline: none;
+    }
+
+/* Botones */
+.form-buttons {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn-guardar, .btn-cancelar {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-guardar {
+  background: #28A745;
+  color: white;
+}
+
+.btn-cancelar {
+  background: #DC3545;
+  color: white;
+}
+
+  .btn-guardar:hover, .btn-cancelar:hover {
+    transform: scale(1.05);
+  }
+
+  .btn-guardar:active, .btn-cancelar:active {
+    transform: scale(0.98);
+  }
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
